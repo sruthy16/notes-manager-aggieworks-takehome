@@ -1,0 +1,81 @@
+/* Container for the whole page */
+div {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Updated font family */
+    background-color: #f0f4f8; /* Light background for a fresh look */
+    padding: 1rem; /* Added padding for better spacing */
+}
+
+/* Styles for the notes section */
+.notes-section {
+    margin-bottom: 2rem;
+}
+
+.notes-section h2 {
+    color: #2c3e50; /* Darker shade for better contrast */
+    font-size: 28px; /* Slightly larger font size for headings */
+    margin-bottom: 0.5rem; /* Improved margin for spacing */
+}
+
+/* Styles for individual notes */
+.note {
+    background-color: #ffffff; /* White background for notes */
+    border-left: 5px solid #3498db; /* More vibrant blue */
+    margin: 15px 0; /* Increased margin for more space between notes */
+    padding: 15px; /* Increased padding for better readability */
+    border-radius: 8px; /* More rounded corners */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
+}
+
+/* Styles for the form section */
+form {
+    background-color: #ffffff; /* White background for form */
+    padding: 2rem; /* Increased padding for comfort */
+    border-radius: 10px; /* More rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Enhanced shadow for a modern feel */
+    max-width: 500px;
+    margin: auto;
+}
+
+form h2 {
+    color: #2c3e50; /* Darker heading color */
+    font-size: 28px; /* Increased font size for consistency */
+    margin-bottom: 1.5rem; /* Improved margin for spacing */
+}
+
+form label {
+    font-weight: 600; /* Slightly bolder for emphasis */
+    margin-top: 1rem; /* Increased margin for spacing */
+    display: block; /* Ensure labels are block elements */
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px; /* Increased padding for comfort */
+    margin: 8px 0 20px; /* Adjusted margin for better spacing */
+    border: 1px solid #ddd; /* Lighter border for a softer look */
+    border-radius: 6px; /* More rounded corners */
+    box-sizing: border-box;
+    transition: border-color 0.3s; /* Smooth transition for border color */
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #3498db; /* Border color change on focus */
+    outline: none; /* Remove default outline */
+}
+
+form input[type="submit"] {
+    background-color: #3498db; /* Updated background color */
+    color: white;
+    padding: 12px 24px; /* Increased padding */
+    border: none;
+    border-radius: 6px; /* More rounded corners */
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+form input[type="submit"]:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+}

@@ -1,0 +1,140 @@
+/* Floating background elements */
+@keyframes float {
+    0%, 100% {
+      transform: translateY(0) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-30px) rotate(180deg);
+    }
+  }
+  
+  /* Form container */
+  .form-container {
+    position: relative; /* Important for positioning floating elements */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    background: linear-gradient(135deg, #f8f9fa, #ffffff); /* Gradient background */
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .form-container:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Floating geometric elements */
+  .form-container::before,
+  .form-container::after,
+  .form-container::nth-child(3) {
+    content: "";
+    position: absolute;
+    background: rgba(0, 123, 255, 0.3);
+    z-index: -1;
+    animation: float 4s ease-in-out infinite;
+    border-radius: 50%; /* Initial round shape */
+  }
+  
+  /* Circle */
+  .form-container::before {
+    width: 100px;
+    height: 100px;
+    top: -70px;
+    left: -40px;
+    animation-duration: 3s;
+  }
+  
+  /* Triangle */
+  .form-container::after {
+    width: 0;
+    height: 0;
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+    border-bottom: 100px solid rgba(0, 123, 255, 0.4); /* Triangle shape */
+    bottom: -80px;
+    right: -40px;
+    animation-duration: 2.5s;
+    animation-timing-function: ease-in-out;
+  }
+  
+  /* Square */
+  .form-container::nth-child(3) {
+    width: 70px;
+    height: 70px;
+    background: rgba(255, 193, 7, 0.4);
+    bottom: -50px;
+    left: 40px;
+    animation-duration: 3.5s;
+    animation-direction: alternate;
+  }
+  
+  /* Form input styling */
+  .form-input {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: #fafafa;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.2s;
+  }
+  
+  .form-input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+  }
+  
+/* Keyframes for the color-changing button */
+@keyframes colorChange {
+  0% {
+    background-color: #e55959; /* Pastel Red */
+  }
+  25% {
+    background-color: #eeb34d; /* Pastel Yellow */
+  }
+  50% {
+    background-color: #5aeb6e; /* Pastel Green */
+  }
+  75% {
+    background-color: #5695ee; /* Pastel Blue */
+  }
+  100% {
+    background-color: #f06060; /* Loops back to initial color */
+  }
+}
+
+/* Form button */
+.form-button {
+  position: relative; /* Important for positioning the shine effect */
+  width: 100%;
+  padding: 14px;
+  margin: 20px 0;
+  background-color: #f6a6a6; /* Initial pastel color */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  animation: colorChange 5s linear infinite; /* Color changing animation */
+  transition: box-shadow 0.3s ease-in-out, transform 0.2s ease-in-out; /* Smooth transitions */
+}
+
+/* Glowing hover effect */
+.form-button:hover {
+  box-shadow: 0 0 20px rgba(246, 166, 166, 0.6), 0 0 40px rgba(246, 166, 166, 0.4); /* Glowing effect */
+  transform: translateY(-2px); /* Slightly raise the button */
+}
+
+.form-button:active {
+  transform: translateY(0); /* Reset position on click */
+  box-shadow: none; /* Remove glow effect on click */
+}
