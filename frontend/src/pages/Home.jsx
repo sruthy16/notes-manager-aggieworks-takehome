@@ -50,6 +50,12 @@ function Home() {
         <div>
             <div>
                 <h2>Notes</h2>
+                <p>
+                    Check out the source code on{" "}
+                    <a href="https://github.com/sruthy16/notes-manager-aggieworks-takehome" target="_blank" rel="noopener noreferrer">
+                        GitHub
+                    </a>.
+                </p>
                 {notes.map((note) => (
                     <Note note={note} onDelete={deleteNote} key={note.id} />
                 ))}
@@ -79,6 +85,7 @@ function Home() {
                 <input type="submit" value="Submit"></input>
             </form>
         </div>
+
     );
 }
 
