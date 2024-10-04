@@ -177,3 +177,10 @@ Using the same credentials, users can log in at any time to access their previou
 <img width="1300" alt="login_page" src="https://github.com/user-attachments/assets/51da30b9-5c08-4c6a-907e-96de920b8a37">
 
 
+<!-- LICENSE -->
+## License
+
+Distributed under the MIT License. See `LICENSE.txt` for more information.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
